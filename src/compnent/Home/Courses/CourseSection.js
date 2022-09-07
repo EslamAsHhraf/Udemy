@@ -8,12 +8,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Bar from "./Bar";
 
-const CourseSection = () => {
+const CourseSection = ({ setCourse }) => {
   let [courses, setCourses] = useState([]);
   const infoRef = React.createRef();
   const preRef = React.createRef();
   const pastRef = React.createRef();
-  const api = "http://myjson.dit.upm.es/api/bins/7bqs";
+  const api = "http://myjson.dit.upm.es/api/bins/4ckg";
   useEffect(() => {
     axios
       .get(api)
@@ -66,10 +66,16 @@ const CourseSection = () => {
           machine learning. You'll learn how to build everything from games to
           sites to apps. Choose from a range of courses that will appeal to...
         </p>
-        <button>Explore Python</button>
+        <button className="buttonHome">Explore Python</button>
         <div ref={infoRef} className="info">
           {courses.length
-            ? courses.map((ele) => <Course key={ele.id} Course={ele}></Course>)
+            ? courses.map((ele) => (
+                <Course
+                  setCourse={setCourse}
+                  key={ele.id}
+                  Course={ele}
+                ></Course>
+              ))
             : null}
         </div>
       </div>

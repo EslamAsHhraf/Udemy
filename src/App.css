@@ -23,12 +23,12 @@ code {
     monospace;
 }
 
-button {
+.buttonHome {
   border-radius: 4px;
   cursor: pointer;
 }
 
-button:hover {
+.buttonHome:hover {
   background: rgb(5, 166, 166) !important;
   color: #f4f4f4;
   transition: all 0.5s;

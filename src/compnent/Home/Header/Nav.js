@@ -29,8 +29,10 @@ const Nav = () => {
           <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: "20px" }} />
         </span>
       </div>
-      <button type="button">Log in</button>
-      <button type="button" className="signup">
+      <button className="buttonHome" type="button">
+        Log in
+      </button>
+      <button type="button" className="signup buttonHome">
         Sign up
       </button>
       <div className="earth">

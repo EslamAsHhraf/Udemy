@@ -1,20 +1,26 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
-import React, { Fragment } from "react";
-import Categories from "./compnent/Home/Categories/Categories";
-import CourseSection from "./compnent/Home/Courses/CourseSection";
+import React, { Fragment, useState } from "react";
+import CoursePage from "./compnent/Pages/CoursePage";
 import Nav from "./compnent/Home/Header/Nav";
-import Landing from "./compnent/Home/Landing/Landing";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./compnent/Pages/Home";
+
 function App() {
+  let [course, setCourse] = useState("");
   return (
-    <Fragment>
-      <Nav></Nav>
-      <Landing></Landing>
-      <main>
-        <CourseSection></CourseSection>
-        <Categories></Categories>
-      </main>
-    </Fragment>
+    <Router>
+      <Fragment>
+        <Nav></Nav>
+      </Fragment>
+      <Routes>
+        <Route path="/" element={<Home setCourse={setCourse}></Home>} />
+        <Route
+          path="/:id"
+          element={<CoursePage course={course}></CoursePage>}
+        />
+      </Routes>
+    </Router>
   );
 }
 

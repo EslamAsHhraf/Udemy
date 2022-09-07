@@ -10,7 +10,11 @@ const Form = () => {
         </span>
         <input type="text" placeholder="Search for anything" />
       </div>
-      <button type="submit" onClick={(e) => e.preventDefault()}>
+      <button
+        className="buttonHome"
+        type="submit"
+        onClick={(e) => e.preventDefault()}
+      >
         Search
       </button>
     </form>
