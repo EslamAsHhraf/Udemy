@@ -49,7 +49,7 @@ h1 {
 
 .icons {
   display: flex;
-  align-items: center;
+  align-items: center !important;
   gap: 8px;
   flex-wrap: wrap;
   font-size: small;

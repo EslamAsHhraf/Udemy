@@ -309,7 +309,9 @@ nav .appear {
 }
 .courses .Course_section {
   min-width: calc(100% / 4 - 31px);
+  position: relative;
 }
+
 @media (max-width: 870px) {
   .courses .Course_section {
     min-width: calc(100% / 3 - 31px);

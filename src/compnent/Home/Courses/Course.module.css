@@ -1,0 +1,60 @@
+.Coursesection:hover .img::after {
+  content: "";
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.403);
+}
+.img {
+  position: relative;
+}
+.list {
+  z-index: 5;
+}
+.Popover {
+  border: none !important;
+  color: black !important;
+  text-align: left;
+  padding: 0px !important;
+  font-size: large !important;
+}
+.update {
+  font-size: x-small;
+  color: green;
+}
+.meduim {
+  font-size: smaller;
+}
+.gary {
+  color: gray;
+}
+.cart {
+  color: white;
+  background-color: #a435f0;
+  border: none;
+  flex-grow: 1;
+  font-weight: bold;
+}
+.cart:hover {
+  background-color: #8228bf;
+}
+.heart {
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+.heart:hover {
+  background-color: rgb(196, 194, 194);
+}

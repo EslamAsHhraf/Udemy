@@ -9,7 +9,7 @@ import axios from "axios";
 function App() {
   let [placeholder, setPlaceholder] = useState(true);
   const [data, setData] = useState([]);
-  const api = "http://myjson.dit.upm.es/api/bins/dpx6";
+  const api = "http://myjson.dit.upm.es/api/bins/7qn6";
   useEffect(() => {
     axios
       .get(api)

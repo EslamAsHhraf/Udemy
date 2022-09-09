@@ -29,7 +29,7 @@ const CourseHeadInfo = ({ data, placeholder }) => {
           );
         })}
       </div>
-      <div className={`d-flex gap-3 ${styles.flexSmall}`}>
+      <div className={`d-flex gap-3  ${styles.flexSmall}`}>
         <div className={`${styles.icons} ${placeholder ? "placeholder" : " "}`}>
           <FontAwesomeIcon icon={faCircleInfo} />
           Last updated {data.lastUpdate}

@@ -9,7 +9,15 @@
       "price": "679.99",
       "old_price": "1599.99",
       "rating": 4.4,
-      "people": "2,948"
+      "people": "2,948",
+      "intro": "Learn A-Z everything about Python, from the basics, to advanced topics like Python GUI, Python Data Analysis, and more!",
+      "update": "September  2015",
+      "total_hourse": "14.5",
+      "overview": [
+        "Create their own Python Programs",
+        "Become an experienced Python Programmer",
+        "Parse the Web and Create their own Games"
+      ]
     },
     {
       "id": "2",
@@ -21,7 +29,15 @@
       "old_price": "2799.99",
       "rating": 4.4,
       "people": "17,999",
-      "bestseller": true
+      "bestseller": true,
+      "intro": "Learn python and how to use it to analyze,visualize and present data. Includes tons of sample code and hours of video!",
+      "update": "September  2019",
+      "total_hourse": "21",
+      "overview": [
+        "Have an intermediate skill level of Python programming.",
+        "Use the Jupyter Notebook Environment.",
+        "Use the numpy library to create and manipulate arrays."
+      ]
     },
     {
       "id": "3",
@@ -32,7 +48,14 @@
       "price": "679.99",
       "old_price": "1599.99",
       "rating": 4.4,
-      "people": "1,781"
+      "people": "1,781",
+      "intro": "Python For Beginners : This course is meant for absolute beginners in programming or in python.",
+      "update": "May  2022",
+      "total_hourse": "2.5",
+      "overview": [
+        "To learn the python language.",
+        "To learn the CORE skills to understand any programming language"
+      ]
     },
     {
       "id": "4",
@@ -43,7 +66,15 @@
       "price": "319.99",
       "old_price": "599.99",
       "rating": 4.3,
-      "people": "2,773"
+      "people": "2,773",
+      "intro": "Python introduction for beginners. Learn complete Python from scratch!",
+      "update": "November 2018",
+      "total_hourse": "1.5",
+      "overview": [
+        "Create fully functional Python programs",
+        "Understand user input",
+        "Learn about loop structures and conditionals"
+      ]
     },
     {
       "id": "5",
