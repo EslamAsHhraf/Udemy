@@ -161,7 +161,7 @@ nav .appear {
     display: none;
   }
   nav {
-    min-width: 380px;
+    min-width: 280px;
   }
   nav > :not(.small) {
     display: none;
@@ -198,7 +198,7 @@ nav .appear {
 .landing .text {
   z-index: 3;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
-  min-width: 380px;
+  min-width: 280px;
   width: 32%;
   display: flex;
   gap: 10px;
@@ -214,7 +214,7 @@ nav .appear {
 }
 @media (max-width: 705px) {
   .landing {
-    min-width: 380px;
+    min-width: 280px;
     flex-direction: column-reverse;
   }
   .landing .text {

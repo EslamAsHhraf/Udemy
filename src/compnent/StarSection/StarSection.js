@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalfStroke } from "@fortawesome/free-solid-svg-icons";
 import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
-import styles from "./CoursePage.module.css";
+import styles from "../Course/CoursePage.module.css";
 
 function starSection({ rate }) {
   let starSection = [];

@@ -3,7 +3,7 @@ import styles from "../CoursePage.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 
-const CourseContent = ({ data }) => {
+const CourseContent = ({ data, placeholder }) => {
   const [itemsShow, setItemsShow] = useState(10);
   const [appear, setAppear] = useState(false);
 
@@ -32,7 +32,7 @@ const CourseContent = ({ data }) => {
             return (
               <div
                 key={index}
-                className={`accordion-item ${styles.accordionItem}`}
+                className={`accordion-item ${styles.accordionItem} `}
               >
                 <h2
                   className="accordion-header"
@@ -41,14 +41,20 @@ const CourseContent = ({ data }) => {
                   <button
                     className={`accordion-button ${styles.collapse}  ${
                       index === 0 ? "" : "collapsed"
-                    } `}
+                    }`}
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target={`#panelsStayOpen-collapse${index}`}
                     aria-expanded={index === 0 ? "true" : "false"}
                     aria-controls={`panelsStayOpen-collapse${index}`}
                   >
-                    <div className="fw-bold">{ele[0]}</div>{" "}
+                    <div
+                      className={`fw-bold  ${
+                        placeholder ? "placeholder" : " "
+                      }`}
+                    >
+                      {ele[0]}
+                    </div>{" "}
                     <div className={`${styles.medium}`}>
                       {ele[1].length} lectures •
                     </div>
@@ -69,9 +75,13 @@ const CourseContent = ({ data }) => {
                       >
                         <FontAwesomeIcon
                           icon={faCirclePlay}
-                          className="me-1 ps-3"
+                          className="me-1 ms-3"
                         />{" "}
-                        {item}
+                        <span
+                          className={` ${placeholder ? "placeholder" : " "}`}
+                        >
+                          {item}
+                        </span>
                       </div>
                     );
                   })}

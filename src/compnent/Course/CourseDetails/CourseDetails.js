@@ -4,13 +4,13 @@ import Description from "./Description";
 
 import Learn from "./Learn";
 import Requirements from "./Requirements";
-const CourseDetails = ({ data }) => {
+const CourseDetails = ({ data, placeholder }) => {
   return (
     <div>
-      <Learn data={data}></Learn>
-      <CourseContent data={data}></CourseContent>
-      <Requirements data={data}></Requirements>
-      <Description data={data}></Description>
+      <Learn placeholder={placeholder} data={data}></Learn>
+      <CourseContent placeholder={placeholder} data={data}></CourseContent>
+      <Requirements placeholder={placeholder} data={data}></Requirements>
+      <Description placeholder={placeholder} data={data}></Description>
     </div>
   );
 };

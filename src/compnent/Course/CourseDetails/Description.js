@@ -4,7 +4,7 @@ import ShowMoreText from "react-show-more-text";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
-const Description = ({ data }) => {
+const Description = ({ data, placeholder }) => {
   return (
     <div className={`${styles.box}  mt-3`}>
       <h3 className="mb-4 fw-bold">Description</h3>
@@ -29,9 +29,19 @@ const Description = ({ data }) => {
                 return (
                   <>
                     {index === 0 ? (
-                      <strong className="mb-3 d-block">{ele}</strong>
+                      <strong
+                        className={`mb-3 d-block ${
+                          placeholder ? "placeholder" : " "
+                        }`}
+                      >
+                        {ele}
+                      </strong>
                     ) : (
-                      <p className="mb-3">{ele}</p>
+                      <p
+                        className={`mb-3  ${placeholder ? "placeholder" : " "}`}
+                      >
+                        {ele}
+                      </p>
                     )}
                   </>
                 );
@@ -43,17 +53,31 @@ const Description = ({ data }) => {
           return (
             <>
               {index === 0 ? (
-                <strong className="mb-3 d-block">{ele}</strong>
+                <strong
+                  className={`mb-3 d-block ${
+                    placeholder ? "placeholder" : " "
+                  }`}
+                >
+                  {ele}
+                </strong>
               ) : (
-                <p className="mb-3">{ele}</p>
+                <p className={`mb-3  ${placeholder ? "placeholder" : " "}`}>
+                  {ele}
+                </p>
               )}
             </>
           );
         })}
         <h3 className="mt-5 mb-3 fw-bold">Who this course is for:</h3>
-        <div className={`d-flex ${styles.requirements}`}>
-          <span className="fw-bolder fs-4 me-4">• </span>
-          {data.whoFor}
+        <div className={`d-flex flex-column ${styles.requirements}`}>
+          {data.whoFor.map((ele) => {
+            return (
+              <>
+                {" "}
+                <span className=" me-4 mb-2">• {ele}</span>
+              </>
+            );
+          })}
         </div>
       </ShowMoreText>
     </div>

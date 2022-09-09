@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Course from "./Course";
-import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleArrowLeft,
@@ -8,22 +7,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Bar from "./Bar";
 
-const CourseSection = ({ setCourse }) => {
-  let [courses, setCourses] = useState([]);
+const CourseSection = ({ setCourse, courses, placeholder }) => {
   const infoRef = React.createRef();
   const preRef = React.createRef();
   const pastRef = React.createRef();
-  const api = "http://myjson.dit.upm.es/api/bins/4ckg";
-  useEffect(() => {
-    axios
-      .get(api)
-      .then((response) => {
-        setCourses(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [api]);
 
   const clickLeft = () => {
     let width = infoRef.current.getBoundingClientRect().width;
@@ -59,7 +46,7 @@ const CourseSection = ({ setCourse }) => {
       </span>
       <div className="text">
         <h3>Expand your career opptunities with Python</h3>
-        <p>
+        <p className={`  ${placeholder ? "placeholder" : " "}`}>
           Take one of Udemy's range of Python courses and learn how to code
           using this incredibly useful language. Its simple syntax and
           readability makes Python perfect for Flask, Django, data science, and
@@ -68,15 +55,14 @@ const CourseSection = ({ setCourse }) => {
         </p>
         <button className="buttonHome">Explore Python</button>
         <div ref={infoRef} className="info">
-          {courses.length
-            ? courses.map((ele) => (
-                <Course
-                  setCourse={setCourse}
-                  key={ele.id}
-                  Course={ele}
-                ></Course>
-              ))
-            : null}
+          {courses?.map((ele) => (
+            <Course
+              setCourse={setCourse}
+              key={ele.id}
+              Course={ele}
+              placeholder={placeholder}
+            ></Course>
+          ))}
         </div>
       </div>
     </section>

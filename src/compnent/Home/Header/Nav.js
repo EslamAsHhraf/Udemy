@@ -8,15 +8,16 @@ import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../../images/logo-udemy.svg";
+import { Link } from "react-router-dom";
 const Nav = () => {
   return (
     <nav>
       <i className="appear small">
         <FontAwesomeIcon icon={faBars} />
       </i>
-      <div className="Logo small">
+      <Link to="/" className="Logo small">
         <img src={Logo} alt="logo-udemy" />
-      </div>
+      </Link>
       <div>Categories</div>
       <Form></Form>
       <div className="min_2">Udemy Business</div>
