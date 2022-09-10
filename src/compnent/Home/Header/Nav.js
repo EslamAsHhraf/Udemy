@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../../images/logo-udemy.svg";
 import { Link } from "react-router-dom";
-const Nav = () => {
+const Nav = ({ path }) => {
   return (
     <nav>
       <i className="appear small">

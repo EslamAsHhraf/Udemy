@@ -1,14 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
-import React, { Fragment, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import CoursePage from "./compnent/Pages/CoursePage";
 import Nav from "./compnent/Home/Header/Nav";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./compnent/Pages/Home";
 import axios from "axios";
+
 function App() {
   let [placeholder, setPlaceholder] = useState(true);
   const [data, setData] = useState([]);
+  const [course, setCourse] = useState("");
+  const [path, setPath] = useState("");
   const api = "http://myjson.dit.upm.es/api/bins/7qn6";
   useEffect(() => {
     axios
@@ -24,12 +27,10 @@ function App() {
       });
   }, [api]);
 
-  let [course, setCourse] = useState("");
   return (
     <Router>
-      <Fragment>
-        <Nav></Nav>
-      </Fragment>
+      <Nav path={path}></Nav>
+
       <Routes>
         <Route
           path="/"
@@ -38,12 +39,19 @@ function App() {
               placeholder={placeholder}
               setCourse={setCourse}
               courses={data.home}
+              setPath={setPath}
             ></Home>
           }
         />
         <Route
           path="/:id"
-          element={<CoursePage course={course} api={data.courses}></CoursePage>}
+          element={
+            <CoursePage
+              course={course}
+              api={data.courses}
+              setPath={setPath}
+            ></CoursePage>
+          }
         />
       </Routes>
     </Router>

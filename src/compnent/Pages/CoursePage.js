@@ -8,8 +8,10 @@ import Reviews from "../Course/Feedback/Reviews";
 import SideBar from "../Course/SideBar/SideBar";
 import Footer from "../Course/Footer/Footer";
 
-const CoursePage = ({ course, api }) => {
-  let [data, setData] = useState(api[Number(course - 1)]);
+const CoursePage = ({ course, api, setPath }) => {
+  setPath("/course");
+  const [data, setData] = useState(api[Number(course - 1)]);
+
   let [placeholder, setPlaceholder] = useState(true);
   useEffect(() => {
     setTimeout(function () {

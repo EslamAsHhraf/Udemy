@@ -23,12 +23,14 @@ code {
     monospace;
 }
 
-.buttonHome {
+.buttonHome,
+.buttonSubmit {
   border-radius: 4px;
   cursor: pointer;
 }
 
-.buttonHome:hover {
+.buttonHome:hover,
+.buttonSubmit:hover {
   background: rgb(5, 166, 166) !important;
   color: #f4f4f4;
   transition: all 0.5s;
@@ -89,7 +91,7 @@ nav input {
 nav input:focus {
   outline: none;
 }
-nav div:hover {
+nav span:hover {
   color: #401b9c;
   cursor: pointer;
 }
@@ -115,15 +117,17 @@ nav form .search .search_icon {
 }
 
 nav form button,
-nav .signup {
-  background-color: #1c1d1f;
-  color: white;
+nav .signup,
+.buttonSubmit {
+  background-color: #1c1d1f !important;
+  color: white !important;
 }
 nav .earth {
   border: 1px solid #1c1d1f;
   padding: 8px 8px !important;
 }
-nav button {
+nav button,
+.buttonSubmit {
   width: 5%;
   min-width: 78px;
   padding: 12px 12px !important;
@@ -133,7 +137,8 @@ nav button {
 }
 nav div,
 nav form,
-nav button {
+nav button,
+.buttonSubmit {
   line-height: 1;
   padding: 12px 0px;
   display: flex;
@@ -157,7 +162,8 @@ nav .appear {
   }
 }
 @media (max-width: 900px) {
-  nav > button {
+  nav > button,
+  .buttonSubmit {
     display: none;
   }
   nav {
@@ -309,24 +315,28 @@ nav .appear {
 }
 .courses .Course_section {
   min-width: calc(100% / 4 - 31px);
+  width: calc(100% / 4 - 31px);
   position: relative;
 }
 
 @media (max-width: 870px) {
   .courses .Course_section {
     min-width: calc(100% / 3 - 31px);
+    width: calc(100% / 3 - 31px);
   }
 }
 
 @media (max-width: 560px) {
   .courses .Course_section {
     min-width: calc(100% / 2 - 31px);
+    width: calc(100% / 2 - 31px);
   }
 }
 
 @media (max-width: 410px) {
   .courses .Course_section {
     min-width: calc(100% / 1 - 31px);
+    width: calc(100% / 1 - 31px);
   }
 }
 .courses .text .info h5 {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Course from "./Course";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -6,29 +6,62 @@ import {
   faCircleArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import Bar from "./Bar";
+import { useSearchParams } from "react-router-dom";
 
 const CourseSection = ({ setCourse, courses, placeholder }) => {
   const infoRef = React.createRef();
   const preRef = React.createRef();
   const pastRef = React.createRef();
-
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [search, setSearch] = useState([]);
+  /* click Left*/
   const clickLeft = () => {
-    let width = infoRef.current.getBoundingClientRect().width;
+    const width = infoRef.current.getBoundingClientRect().width;
     preRef.current.style.display = "block";
     infoRef.current.scrollLeft -= width;
     if (infoRef.current.scrollLeft - width < 0) {
       pastRef.current.style.display = "none";
     }
   };
-
+  /* click Right*/
   const clickRight = () => {
-    let width = infoRef.current.getBoundingClientRect().width;
+    const width = infoRef.current.getBoundingClientRect().width;
     infoRef.current.scrollLeft += width;
     if (infoRef.current.scrollLeft - infoRef.current.scrollWidth > -2 * width) {
       preRef.current.style.display = "none";
     }
     pastRef.current.style.display = " block";
   };
+  /* cehack width*/
+  useEffect(() => {
+    const width = infoRef.current.getBoundingClientRect().width;
+    if (
+      infoRef.current.scrollLefts + width >= infoRef.current.scrollWidth ||
+      infoRef.current.scrollWidth === width
+    ) {
+      preRef.current.style.display = "none";
+    } else {
+      preRef.current.style.display = "block";
+    }
+  }, [search, infoRef.current?.getBoundingClientRect().width]);
+  /* filter */
+  useEffect(() => {
+    setSearch(courses);
+    if (!searchParams.get(`filter`)) {
+      setSearch(courses);
+    } else {
+      setSearch(
+        courses?.filter((e) => {
+          return e.title
+            .toLowerCase()
+            .includes(
+              searchParams.get(`filter`).toString().toLowerCase().trim()
+            );
+        })
+      );
+      console.log(search);
+    }
+  }, [searchParams.get(`filter`), courses]);
 
   return (
     <section className="box courses">
@@ -55,7 +88,7 @@ const CourseSection = ({ setCourse, courses, placeholder }) => {
         </p>
         <button className="buttonHome">Explore Python</button>
         <div ref={infoRef} className="info">
-          {courses?.map((ele) => (
+          {search?.map((ele) => (
             <Course
               setCourse={setCourse}
               key={ele.id}

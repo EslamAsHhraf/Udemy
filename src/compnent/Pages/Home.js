@@ -3,7 +3,8 @@ import Categories from "../Home/Categories/Categories";
 import CourseSection from "../Home/Courses/CourseSection";
 import Landing from "../Home/Landing/Landing";
 
-const Home = ({ setCourse, placeholder, courses }) => {
+const Home = ({ setCourse, placeholder, courses, setPath }) => {
+  setPath("/");
   return (
     <Fragment>
       <Landing></Landing>
