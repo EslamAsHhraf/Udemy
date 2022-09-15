@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "./Form";
+import SearchBar from "./SearchBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMagnifyingGlass,
@@ -19,7 +19,7 @@ const Nav = ({ path }) => {
         <img src={Logo} alt="logo-udemy" />
       </Link>
       <div>Categories</div>
-      <Form></Form>
+      <SearchBar></SearchBar>
       <div className="min_2">Udemy Business</div>
       <div className="min_2">Teach on Udemy</div>
       <div className="shopping_cart small">

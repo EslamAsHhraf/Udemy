@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-const Form = ({ path }) => {
+const SearchBar = ({ path }) => {
   let navigate = useNavigate();
 
   const [input, setInput] = useState("");
@@ -38,4 +38,4 @@ const Form = ({ path }) => {
   );
 };
 
-export default Form;
+export default SearchBar;
