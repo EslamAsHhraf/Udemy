@@ -10,15 +10,16 @@ import {
   faChevronUp,
 } from "@fortawesome/free-solid-svg-icons";
 import ShowMoreText from "react-show-more-text";
+import { Fragment } from "react";
 
 const Instructors = ({ data, placeholder }) => {
   return (
     <div className={`${styles.box} mt-4`}>
       <h3 className="mb-4  fw-bold">Instructors</h3>
       <div>
-        {data.instructor?.map((ele) => {
+        {data.instructor?.map((ele, index) => {
           return (
-            <div className={` mb-5 `}>
+            <div key={index} className={` mb-5 `}>
               <h5
                 className={`${styles.button} ${styles.instructors}  ${
                   placeholder ? "placeholder" : " "
@@ -45,32 +46,32 @@ const Instructors = ({ data, placeholder }) => {
                   ></img>
                 )}
                 <div className="d-flex flex-column gap-2">
-                  <div>
+                  <div key="faStar">
                     <FontAwesomeIcon
                       icon={faStar}
                       className={` ${styles.large} ${styles.smallMargin}`}
-                    />
+                    ></FontAwesomeIcon>
                     {ele.Rating} Instructor Rating
                   </div>
-                  <div>
+                  <div key="faAward">
                     <FontAwesomeIcon
                       icon={faAward}
                       className={`me-4 ${styles.large}`}
-                    />
+                    ></FontAwesomeIcon>
                     {ele.reviewsNumber} Reviewss
                   </div>
-                  <div>
+                  <div key="faUser">
                     <FontAwesomeIcon
                       icon={faUser}
                       className={` ${styles.large}  ${styles.groupMargin}`}
-                    />
+                    ></FontAwesomeIcon>
                     {ele.studentsNumber} Students
                   </div>
-                  <div>
+                  <div key="faCirclePlay">
                     <FontAwesomeIcon
                       icon={faCirclePlay}
                       className={`${styles.large} ${styles.playMargin}`}
-                    />
+                    ></FontAwesomeIcon>
                     {ele.coursesNumber} Courses
                   </div>
                 </div>
@@ -80,21 +81,24 @@ const Instructors = ({ data, placeholder }) => {
                 className="content-css"
                 more={
                   <>
-                    Show more <FontAwesomeIcon icon={faChevronDown} />
+                    Show more{" "}
+                    <FontAwesomeIcon icon={faChevronDown}></FontAwesomeIcon>
                   </>
                 }
                 less={
                   <>
-                    Show less <FontAwesomeIcon icon={faChevronUp} />
+                    Show less{" "}
+                    <FontAwesomeIcon icon={faChevronUp}></FontAwesomeIcon>
                   </>
                 }
                 anchorClass={`my-anchor-css-class ${styles.button} ${styles.showMore} fw-bold`}
                 truncatedEndingComponent={
                   <div className={`${styles.contentMore}`}>
                     {ele.description?.map((item, index) => {
-                      if (index < 2)
+                      if (index < 2) {
                         return (
                           <p
+                            key={item}
                             className={`mb-3  ${
                               placeholder ? "placeholder" : " "
                             }`}
@@ -102,6 +106,7 @@ const Instructors = ({ data, placeholder }) => {
                             {item}
                           </p>
                         );
+                      } else return <Fragment key={item}></Fragment>;
                     })}
                   </div>
                 }
@@ -109,6 +114,7 @@ const Instructors = ({ data, placeholder }) => {
                 {ele.description?.map((item) => {
                   return (
                     <p
+                      key={item}
                       className={`mb-3  ${placeholder ? "placeholder" : " "} `}
                     >
                       {item}

@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import styles from "../CoursePage.module.css";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
+import { Fragment } from "react";
 
 const CourseHeadInfo = ({ data, placeholder }) => {
   return (
@@ -16,7 +17,7 @@ const CourseHeadInfo = ({ data, placeholder }) => {
         Created by{" "}
         {data.instructor?.map((ele, index) => {
           return (
-            <>
+            <Fragment key={ele.name}>
               <span
                 className={`${styles.link} ${
                   placeholder ? "placeholder" : " "
@@ -25,7 +26,7 @@ const CourseHeadInfo = ({ data, placeholder }) => {
                 {ele.name}
               </span>
               {index !== data.instructor.length - 1 ? ", " : ""}
-            </>
+            </Fragment>
           );
         })}
       </div>

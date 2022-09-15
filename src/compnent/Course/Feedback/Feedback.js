@@ -18,6 +18,7 @@ const Feedback = ({ data, placeholder }) => {
           <div className={`${styles.largeScreen}`}>
             {!placeholder && (
               <StarSection
+                unique="1010"
                 className={`fw-bold fs-1`}
                 rate={data.rate}
               ></StarSection>
@@ -34,7 +35,7 @@ const Feedback = ({ data, placeholder }) => {
         <div className={` ${styles.rateLevel} `}>
           {data.studentFeedback?.map((ele, index) => {
             return (
-              <div className={`mb-1 d-flex ${styles.row} gap-2`}>
+              <div key={ele} className={`mb-1 d-flex ${styles.row} gap-2`}>
                 <div
                   className={`${styles.barContainer}  ${
                     placeholder ? "placeholder" : " "
@@ -48,7 +49,10 @@ const Feedback = ({ data, placeholder }) => {
                 <div className={` d-flex gap-2`}>
                   <div>
                     {!placeholder && (
-                      <StarSection rate={5 - index}></StarSection>
+                      <StarSection
+                        key={10 + index}
+                        rate={5 - index}
+                      ></StarSection>
                     )}
                   </div>
                   <div className={`  ${placeholder ? "placeholder" : " "}`}>

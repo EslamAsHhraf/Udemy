@@ -12,7 +12,7 @@ const CourseSection = ({ setCourse, courses, placeholder }) => {
   const infoRef = React.createRef();
   const preRef = React.createRef();
   const pastRef = React.createRef();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const [search, setSearch] = useState([]);
   /* click Left*/
   const clickLeft = () => {
@@ -43,7 +43,7 @@ const CourseSection = ({ setCourse, courses, placeholder }) => {
     } else {
       preRef.current.style.display = "block";
     }
-  }, [search, infoRef.current?.getBoundingClientRect().width]);
+  }, [search, infoRef, preRef]);
   /* filter */
   useEffect(() => {
     setSearch(courses);
@@ -59,9 +59,8 @@ const CourseSection = ({ setCourse, courses, placeholder }) => {
             );
         })
       );
-      console.log(search);
     }
-  }, [searchParams.get(`filter`), courses]);
+  }, [searchParams, courses]);
 
   return (
     <section className="box courses">
@@ -88,10 +87,10 @@ const CourseSection = ({ setCourse, courses, placeholder }) => {
         </p>
         <button className="buttonHome">Explore Python</button>
         <div ref={infoRef} className="info">
-          {search?.map((ele) => (
+          {search?.map((ele, index) => (
             <Course
               setCourse={setCourse}
-              key={ele.id}
+              key={`${index} `}
               Course={ele}
               placeholder={placeholder}
             ></Course>

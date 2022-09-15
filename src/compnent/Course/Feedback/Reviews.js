@@ -14,7 +14,10 @@ const Reviews = ({ data, placeholder }) => {
   return (
     <div className={`${styles.box} mt-4`}>
       <h3 className="mb-4  fw-bold">Reviews</h3>
-      <div className={`d-flex  align-items-center gap-4 ${styles.level}`}>
+      <div
+        key={"form"}
+        className={`d-flex  align-items-center gap-4 ${styles.level}`}
+      >
         <form className={`${styles.fromRrview} d-flex`}>
           <div className={`${styles.searchRrview}`}>
             <input
@@ -35,14 +38,24 @@ const Reviews = ({ data, placeholder }) => {
           <select className={`form-select `}>
             <option value="1">All ratings</option>
             {ratings.map((ele) => {
-              return <option value={ele}>{ele}</option>;
+              return (
+                <option key={ele} value={ele}>
+                  {ele}
+                </option>
+              );
             })}
           </select>
         </div>
       </div>
-      <div className="mt-5">
-        {data.reviews?.map((ele) => {
-          return <Comments item={ele} placeholder={placeholder}></Comments>;
+      <div key={"rate"} className="mt-5">
+        {data.reviews?.map((ele, index) => {
+          return (
+            <Comments
+              key={index + 6}
+              item={ele}
+              placeholder={placeholder}
+            ></Comments>
+          );
         })}
       </div>
     </div>

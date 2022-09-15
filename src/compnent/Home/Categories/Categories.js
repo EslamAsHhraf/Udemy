@@ -19,9 +19,9 @@ const Categories = () => {
     <section className="box categories">
       <h3>Top categories</h3>
       <div className="grid">
-        {categories?.map((ele) => {
+        {categories?.map((ele, index) => {
           return (
-            <div className="g-col-lg-3 g-col-md-4 g-col-sm-12">
+            <div key={index} className="g-col-lg-3 g-col-md-4 g-col-sm-12">
               <div className="boximg">
                 <img src={ele.image} alt={ele.title} />
               </div>

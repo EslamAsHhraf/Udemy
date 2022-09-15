@@ -5,7 +5,6 @@ import CoursePage from "./compnent/Pages/CoursePage";
 import Nav from "./compnent/Home/Header/Nav";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./compnent/Pages/Home";
-import axios from "axios";
 
 function App() {
   let [placeholder, setPlaceholder] = useState(true);
@@ -14,10 +13,10 @@ function App() {
   const [path, setPath] = useState("");
   const api = "http://myjson.dit.upm.es/api/bins/7qn6";
   useEffect(() => {
-    axios
-      .get(api)
-      .then((response) => {
-        setData(response.data);
+    fetch(api)
+      .then((response) => response.json())
+      .then((actualData) => {
+        setData(actualData);
         setTimeout(function () {
           setPlaceholder(false);
         }, 1000);
@@ -25,7 +24,7 @@ function App() {
       .catch((error) => {
         console.log(error);
       });
-  }, [api]);
+  }, []);
 
   return (
     <Router>
@@ -40,17 +39,13 @@ function App() {
               setCourse={setCourse}
               courses={data.home}
               setPath={setPath}
-            ></Home>
+            />
           }
         />
         <Route
           path="/:id"
           element={
-            <CoursePage
-              course={course}
-              api={data.courses}
-              setPath={setPath}
-            ></CoursePage>
+            <CoursePage course={course} api={data.courses} setPath={setPath} />
           }
         />
       </Routes>

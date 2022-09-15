@@ -53,7 +53,9 @@ const CourseHead = ({ data, placeholder }) => {
               {Number(data.rate).toFixed(1)}
             </span>
             <span>
-              {!placeholder && <StarSection rate={data.rate}></StarSection>}
+              {!placeholder && (
+                <StarSection key={1} rate={data.rate}></StarSection>
+              )}
             </span>
           </div>
           <span

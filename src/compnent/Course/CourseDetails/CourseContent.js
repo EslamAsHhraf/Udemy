@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "../CoursePage.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
+import { Fragment } from "react";
 
 const CourseContent = ({ data, placeholder }) => {
   const [itemsShow, setItemsShow] = useState(10);
@@ -14,24 +15,24 @@ const CourseContent = ({ data, placeholder }) => {
   return (
     <div className={`${styles.box}`}>
       <h3 className=" fw-bold">Course content</h3>
-      <diV
+      <div
         className={`d-flex justify-content-between ${styles.medium} align-items-center`}
       >
-        <diV className="my-3">
+        <div className="my-3">
           {data.sectionsCount} sections • {data.lecturesCount} lectures •
           {data.totalLength} total length
-        </diV>
-        <diV className={`${styles.button}`}> Expand all sections</diV>
-      </diV>
+        </div>
+        <div className={`${styles.button}`}> Expand all sections</div>
+      </div>
       <div
         className={`accordion ${styles.accordion}`}
         id="accordionPanelsStayOpenExample"
       >
         {data.content?.map((ele, index) => {
-          if (index < itemsShow)
+          if (index < itemsShow) {
             return (
               <div
-                key={index}
+                key={ele}
                 className={`accordion-item ${styles.accordionItem} `}
               >
                 <h2
@@ -67,16 +68,16 @@ const CourseContent = ({ data, placeholder }) => {
                   }`}
                   aria-labelledby={`panelsStayOpen-heading${index}`}
                 >
-                  {ele[1].map((item, indx) => {
+                  {ele[1].map((item) => {
                     return (
                       <div
-                        key={indx}
+                        key={item}
                         className={`accordion-body ${styles.lesson}`}
                       >
                         <FontAwesomeIcon
                           icon={faCirclePlay}
                           className="me-1 ms-3"
-                        />{" "}
+                        ></FontAwesomeIcon>{" "}
                         <span
                           className={` ${placeholder ? "placeholder" : " "}`}
                         >
@@ -88,10 +89,13 @@ const CourseContent = ({ data, placeholder }) => {
                 </div>
               </div>
             );
+          } else {
+            return <Fragment key={ele}> </Fragment>;
+          }
         })}
       </div>
       {appear || data.content?.length <= 10 ? (
-        <></>
+        <Fragment></Fragment>
       ) : (
         <button onClick={moreSection} className={`${styles.moreSections}`}>
           {data.content?.length - itemsShow} maore sections

@@ -15,9 +15,10 @@ const popUp = ({ Course }) => {
         {Course.total_hourse} total hours All • Levels • Subtitles
       </p>
       <p className={`${styles.meduim}`}>{Course.intro}</p>
-      {Course.overview?.map((ele) => {
+      {Course.overview?.map((ele, index) => {
         return (
           <div
+            key={index}
             className={`${styles.meduim} d-flex gap-2 align-items-flex-start`}
           >
             <FontAwesomeIcon icon={faCheck} /> <span> {ele}</span>

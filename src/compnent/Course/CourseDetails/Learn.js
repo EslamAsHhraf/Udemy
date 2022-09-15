@@ -9,9 +9,10 @@ const Learn = ({ data, placeholder }) => {
       <div
         className={`${styles.icons} ${styles.level}  justify-content-between`}
       >
-        {data.overview?.map((ele) => {
+        {data.overview?.map((ele, index) => {
           return (
             <div
+              key={index}
               className={`mb-2 ${styles.learnContent}${
                 placeholder ? "placeholder" : " "
               } `}

@@ -6,9 +6,9 @@ const Requirements = ({ data, placeholder }) => {
     <div className={`${styles.box} mt-3`}>
       <h3 className="mb-4 fw-bold">Requirements</h3>
       <ul className={`${styles.requirements}`}>
-        {data.requirements?.map((ele) => {
+        {data.requirements?.map((ele, index) => {
           return (
-            <li>
+            <li key={index}>
               <span className={`fw-bolder fs-4 me-4`}>• </span>
               <span className={`${placeholder ? "placeholder" : " "}`}>
                 {ele}

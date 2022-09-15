@@ -17,10 +17,12 @@ const Comments = ({ item, placeholder }) => {
           .substring(0, 2)}
       </div>
       <div className={`mb-3`}>
-        <diV className={`fw-bold mb-2  ${placeholder ? "placeholder" : " "}`}>
+        <div className={`fw-bold mb-2  ${placeholder ? "placeholder" : " "}`}>
           {item.name}
-        </diV>
-        {!placeholder && <StarSection rate={Number(item.rate)}></StarSection>}
+        </div>
+        {!placeholder && (
+          <StarSection unique={"66"} rate={Number(item.rate)}></StarSection>
+        )}
         {item.content?.length < 300 ? (
           <p className={`my-2 ${placeholder ? "placeholder" : " "} `}>
             {item.content}

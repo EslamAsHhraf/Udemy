@@ -26,7 +26,6 @@ function Course({ Course, setCourse, placeholder }) {
   };
   return (
     <Link
-      key={Course.id}
       to={`${Course.id}`}
       onClick={() => setCourse(`${Course.id}`)}
       className={`Course_section ${styles.Coursesection}`}
@@ -54,6 +53,7 @@ function Course({ Course, setCourse, placeholder }) {
             </span>
             {!placeholder && (
               <StarSection
+                unique={`20  ${Course.title}`}
                 className="checked"
                 rate={Course.rating}
               ></StarSection>

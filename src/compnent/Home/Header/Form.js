@@ -8,7 +8,6 @@ const Form = ({ path }) => {
   const [input, setInput] = useState("");
   return (
     <form>
-      className
       <div className="search">
         <span>
           <FontAwesomeIcon icon={faMagnifyingGlass} color="black" />{" "}
@@ -17,7 +16,7 @@ const Form = ({ path }) => {
           type="text"
           placeholder="Search for anything"
           onChange={(event) => {
-            setInput(event.target.value.toString().toLowerCase().trim());
+            setInput(event?.target?.value);
           }}
         />
       </div>
@@ -31,9 +30,6 @@ const Form = ({ path }) => {
           } else {
             navigate("/?filter=" + input);
           }
-
-          // setSearchParams({ filter: `${input}` });
-          // navigate(-1);
         }}
       >
         Search

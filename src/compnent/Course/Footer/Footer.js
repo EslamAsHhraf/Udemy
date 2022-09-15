@@ -14,13 +14,13 @@ const Footer = () => {
   return (
     <div className={`${styles.footer} pb-5`}>
       <div className={` ${styles.footerHead} `}>
-        <diV className={`d-flex `}>
+        <div className={`d-flex `}>
           <p className="fs-5 fw-bold">
             Top companies choose{" "}
             <span className={` ${styles.path} `}>Udemy Business</span> to build
             in-demand career skills.
           </p>
-        </diV>
+        </div>
         <div className={`${styles.footerImage} d-flex gap-3`}>
           <span className={`  ${styles.Logo}`}>
             <img src={nasdaqLight} alt="nasdaq"></img>
@@ -63,9 +63,9 @@ const Footer = () => {
             <span>Accessibilty statement</span>
           </div>
         </div>
-        <diV className={`${styles.language}`}>
+        <div className={`${styles.language}`}>
           <FontAwesomeIcon icon={faGlobe}></FontAwesomeIcon> English
-        </diV>
+        </div>
       </div>
       <div className={` ${styles.footerInfo} `}>
         <Link to="/" className={`  ${styles.Logo}`}>

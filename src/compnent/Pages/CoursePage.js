@@ -9,8 +9,10 @@ import SideBar from "../Course/SideBar/SideBar";
 import Footer from "../Course/Footer/Footer";
 
 const CoursePage = ({ course, api, setPath }) => {
-  setPath("/course");
-  const [data, setData] = useState(api[Number(course - 1)]);
+  useEffect(() => {
+    setPath("/course");
+  });
+  const [data] = useState(api[Number(course - 1)]);
 
   let [placeholder, setPlaceholder] = useState(true);
   useEffect(() => {
