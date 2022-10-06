@@ -1,0 +1,454 @@
+:root {
+  --main-font: Arial, Helvetica, sans-serif;
+  --second-font: Georgia, "Times New Roman", Times, serif;
+  --main-color: #1c1d1f;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: var(--main-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.buttonHome,
+.buttonSubmit {
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttonHome:hover,
+.buttonSubmit:hover {
+  background: rgb(5, 166, 166) !important;
+  color: #f4f4f4;
+  transition: all 0.5s;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none !important;
+  color: var(--main-color) !important;
+}
+.box {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+@media (max-width: 705px) {
+  .box {
+    padding: 0px;
+  }
+}
+
+/* Large */
+
+@media (min-width: 1200px) {
+  .box {
+    width: 1100px;
+  }
+}
+/* Start Nav */
+
+nav {
+  font-family: var(--second-font);
+  font-weight: 400;
+  font-size: smaller;
+  line-height: 1;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+  padding: 0px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 75px;
+}
+nav img {
+  height: 35px;
+}
+nav input {
+  outline: none;
+  border: none;
+  padding-left: 4px;
+  font-weight: 400;
+  font-size: smaller;
+  background-color: #f4f4f4;
+  width: 100%;
+}
+nav input:focus {
+  outline: none;
+}
+nav span:hover {
+  color: #401b9c;
+  cursor: pointer;
+}
+nav form .search {
+  border: 1px solid #1c1d1f;
+  padding: 12px 24px 12px 12px;
+  border-radius: 9999px;
+  -webkit-border-radius: 9999px;
+  -moz-border-radius: 9999px;
+  -ms-border-radius: 9999px;
+  -o-border-radius: 9999px;
+  width: 100%;
+  background-color: #f4f4f4;
+}
+nav form {
+  display: flex;
+  gap: 8px;
+  min-width: 200px;
+  width: 100%;
+}
+nav form .search .search_icon {
+  color: gray;
+}
+
+nav form button,
+nav .signup,
+.buttonSubmit {
+  background-color: #1c1d1f !important;
+  color: white !important;
+}
+nav .earth {
+  border: 1px solid #1c1d1f;
+  padding: 8px 8px !important;
+}
+nav button,
+.buttonSubmit {
+  width: 5%;
+  min-width: 78px;
+  padding: 12px 12px !important;
+  border: 1px solid #1c1d1f;
+  background-color: transparent;
+  font-weight: bolder;
+}
+nav div,
+nav form,
+nav button,
+.buttonSubmit {
+  line-height: 1;
+  padding: 12px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .min_2 {
+  min-width: 100px;
+}
+nav .appear {
+  display: none;
+}
+@media (max-width: 1058px) {
+  nav .min_2 {
+    display: none;
+  }
+}
+@media (max-width: 945px) {
+  nav .earth {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  nav > button,
+  .buttonSubmit {
+    display: none;
+  }
+  nav {
+    min-width: 280px;
+  }
+  nav > :not(.small) {
+    display: none;
+  }
+  nav .appear {
+    display: block;
+  }
+  nav i:first-child {
+    font-size: larger;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  nav .shopping_cart span:first-child {
+    margin-right: 12px;
+  }
+}
+
+/*End Nav */
+/* Start landing */
+.landing {
+  width: 90%;
+  position: relative;
+  z-index: -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fb;
+}
+.landing img {
+  width: 300px;
+}
+.landing .text {
+  z-index: 3;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+  min-width: 280px;
+  width: 32%;
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  flex-direction: column;
+}
+
+@media (max-width: 850px) {
+  .container {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 705px) {
+  .landing {
+    min-width: 280px;
+    flex-direction: column-reverse;
+  }
+  .landing .text {
+    width: 100%;
+    min-width: none;
+  }
+}
+
+@media (max-width: 350px) {
+  .landing img {
+    width: 100%;
+  }
+}
+/* End landing */
+/*Start Courses*/
+.courses {
+  position: relative;
+}
+.courses p {
+  margin: 16px 0px;
+}
+.courses ul {
+  padding: 16px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.courses ul :not(.active) {
+  color: #9a9a9a;
+}
+.courses ul li {
+  font-weight: bolder;
+}
+.courses ul li:hover {
+  color: var(--main-color);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.courses .text {
+  padding: 32px;
+  margin: 16px 0px;
+  border: 1px solid #1c1d1f;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 8%);
+}
+
+.courses .left,
+.courses .right {
+  position: absolute;
+
+  color: white;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  padding: 8px;
+  bottom: 24%;
+  cursor: pointer;
+  font-size: 32px;
+}
+.courses .right {
+  right: 5px;
+}
+.courses .left {
+  display: none;
+  left: 0;
+  padding-left: 12px;
+  padding-right: 4px;
+}
+.courses .text p {
+  font-weight: 100;
+  width: 80%;
+}
+.courses .text button {
+  background: white;
+  padding: 16px 8px;
+  font-weight: bolder;
+  font-size: small;
+}
+.courses .text .info {
+  margin-top: 32px;
+  display: flex;
+  gap: 31px;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+.courses .Course_section {
+  min-width: calc(100% / 4 - 31px);
+  width: calc(100% / 4 - 31px);
+  position: relative;
+}
+
+@media (max-width: 870px) {
+  .courses .Course_section {
+    min-width: calc(100% / 3 - 31px);
+    width: calc(100% / 3 - 31px);
+  }
+}
+
+@media (max-width: 560px) {
+  .courses .Course_section {
+    min-width: calc(100% / 2 - 31px);
+    width: calc(100% / 2 - 31px);
+  }
+}
+
+@media (max-width: 410px) {
+  .courses .Course_section {
+    min-width: calc(100% / 1 - 31px);
+    width: calc(100% / 1 - 31px);
+  }
+}
+.courses .text .info h5 {
+  line-height: 1.2;
+  letter-spacing: -0.05rem;
+  font-size: 75%;
+  margin: 8px 0px 2px;
+}
+.courses .text .info div span {
+  font-size: x-small;
+  color: #9a9a9a;
+}
+.courses .info div img {
+  width: 100%;
+}
+.courses .text .star {
+  display: flex;
+  gap: 2px;
+  flex-direction: row;
+  margin: 5px 0px;
+}
+.courses .text .star .rate {
+  color: #b56a1c;
+  font-weight: bold;
+  margin-right: 3px;
+}
+.courses .text .star .checked {
+  color: orange;
+}
+.courses .text .star .num {
+  font-size: xx-small;
+}
+.courses .Course_section .price {
+  display: flex;
+  gap: 8px;
+  font-size: small;
+  color: #9a9a9a;
+}
+.courses .Course_section .price span:first-child {
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 100%;
+}
+.courses .small {
+  display: none;
+}
+@media (max-width: 907px) {
+  .courses {
+    min-width: 230px;
+    text-align: center;
+    width: 100%;
+  }
+  .courses .text p {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    font-size: medium;
+  }
+  .courses ul li {
+    font-size: medium;
+  }
+
+  .courses .text .info {
+    text-align: left;
+  }
+}
+@media (max-width: 462px) {
+  .courses .text {
+    min-width: 230px;
+  }
+}
+
+/*Start categories */
+.categories {
+  padding: 16px;
+}
+.categories h3 {
+  margin-bottom: 16px;
+}
+.categories .boximg {
+  height: 230px;
+  background-color: #f8f9fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.categories .g-col-lg-3:hover img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+.grid .g-col-sm-12 {
+  cursor: pointer;
+}
+.categories .grid > div img {
+  max-height: 80%;
+  transition: 0.3s;
+}
+@media (max-width: 769px) {
+  .categories .grid > div {
+    text-align: center;
+  }
+  .categories .boximg {
+    width: 230px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 576px) {
+  .grid .g-col-sm-12 {
+    grid-column: auto/span 12;
+  }
+}
+/*End categories */
