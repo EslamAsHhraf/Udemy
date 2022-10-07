@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# <img  align="center" width= 65px  src="https://logos-world.net/wp-content/uploads/2021/11/Udemy-Emblem.png"> Udemy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+<img height=350px src="https://about.udemy.com/wp-content/uploads/2022/03/TURBO-ANIMATION-CONCEPT.gif">
+<div align="center"  width=10%>
 
-In the project directory, you can run:
+</div>
+</div>
 
-### `npm start`
+<hr style="background-color: #4b4c60"></hr>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## <img align= center width=50px height=50px src="https://user-images.githubusercontent.com/71986226/154075883-2a5679d2-b411-448f-b423-9565babf35aa.gif"> Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- <a href ="#about"> 📙 Overview</a>
+- <a href ="#Started"> 💻 Get Started</a>
+- <a href ="#Video"> 🎥 Demo</a>
+- <a href ="#Contributors"> ✨ Contributors</a>
+- <a href ="#License"> 🔒 License</a>
+<hr style="background-color: #4b4c60"></hr>
+<a id = "about"></a>
 
-### `npm test`
+## <img align="center"  height =50px src="https://user-images.githubusercontent.com/71986226/154076110-1233d7a8-92c2-4d79-82c1-30e278aa518a.gif"> Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<ul>
+ <li>
 
-### `npm run build`
+It is task in intern in bld.ai. It is **Building Udemy** website using **React.JS**, you can view courses ,content and instructor etc...,you can like and dislike comments. </li>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ <li> The Project is built by
+ 
+ <ul>
+    <li> React Hooks (useState, useEffect) </li>
+    <li> React Components </li>
+    <li> Fetch API </li>
+    <li> Bootstrap and CSS module - for styling </li>
+    <li> Scrolling </li>
+    <li>Search bar </li>
+    <li> Dynamic Routing </li>
+   </ul>
+   </li>
+</ul>
+<li>Let's Go visit <a href="https://snazzy-meerkat-1bf0dc.netlify.app/">Rick & Morty Wiki
+</li>
+<hr style="background-color: #4b4c60"></hr>
+<a id = "Started"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## <img  align= center width=50px height=50px src="https://c.tenor.com/HgX89Yku5V4AAAAi/to-the-moon.gif"> Get Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<ol>
+<li>Clone the repository.
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+git clone https://github.com/EslamAsHhraf/Project-Two-bld-Eslam
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+</li>
+<li>Open terminal</li>
+<li>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+</li>
+<li>
 
-## Learn More
+```
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+</li>
+</ol>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<hr style="background-color: #4b4c60"></hr>
+<a id ="Video"></a>
 
-### Code Splitting
+## <img  align= center width= 70px height =70px src="https://img.genial.ly/5f91608064ad990c6ee12237/bd7195a3-a8bb-494b-8a6d-af48dd4deb4b.gif?genial&1643587200063"> Demo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<div  align="center">
+<video src="https://user-images.githubusercontent.com/71986226/189550759-836e8ef1-9d0e-4721-a766-914e4c721f6f.mp4">
+</video> 
+</div>
 
-### Analyzing the Bundle Size
+<hr style="background-color: #4b4c60"></hr>
+<a id ="Contributors"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## <img align="center"  height =60px src="https://user-images.githubusercontent.com/63050133/156777293-72a6e681-2582-4a9d-ad92-09d1181d47c7.gif"> Contributors
 
-### Making a Progressive Web App
+<br>
+<table >
+  <tr>
+        <td align="center"><a href="https://github.com/EslamAsHhraf"><img src="https://avatars.githubusercontent.com/u/71986226?v=4" width="150px;" alt=""/><br /><sub><b>Eslam Ashraf</b></sub></a><br /></td>
+  </tr>
+</table>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<hr style="background-color: #4b4c60"></hr>
 
-### Advanced Configuration
+<a id ="License"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔒 License
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> **Note**: This software is licensed under MIT License, See [License](https://github.com/EslamAsHhraf/Rick-and-Morty/blob/main/LICENSE) for more information ©EslamAsHhraf.
