@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/Udemy/static/css/main.7a980709.css",
-    "main.js": "/Udemy/static/js/main.73a14444.js",
+    "main.js": "/Udemy/static/js/main.955e82c9.js",
     "static/media/landing.jpg": "/Udemy/static/media/landing.bfb3525ce60e78346425.jpg",
-    "static/media/eventbrite-light.svg": "/Udemy/static/media/eventbrite-light.2a889053d0b37427db6291c87d5b0431.svg",
-    "static/media/nasdaq-light.svg": "/Udemy/static/media/nasdaq-light.ee2c456c43ec53a8d5189591ce883e19.svg",
-    "static/media/netapp-light.svg": "/Udemy/static/media/netapp-light.2c852f49b3dacd941a8b48847dfc5842.svg",
-    "static/media/logo-udemy-inverted.svg": "/Udemy/static/media/logo-udemy-inverted.bc61c6989dd94540b76689ec30e1b7f5.svg",
-    "static/media/volkswagen-light.svg": "/Udemy/static/media/volkswagen-light.65245516321f31cf328b8ab42689d3e1.svg",
-    "static/media/logo-udemy.svg": "/Udemy/static/media/logo-udemy.ac64b9eb547dc3795f53173b290203d9.svg",
-    "static/media/box-light.svg": "/Udemy/static/media/box-light.3bf6bb164f7c0b3c9b92f01428ef19bd.svg",
+    "static/media/eventbrite-light.svg": "/Udemy/static/media/eventbrite-light.b6bf9fcd63d149caac3a34a6e116d4a9.svg",
+    "static/media/nasdaq-light.svg": "/Udemy/static/media/nasdaq-light.53aa1c9d49662057ddb35435c13dd4a5.svg",
+    "static/media/netapp-light.svg": "/Udemy/static/media/netapp-light.7fae2c91496bb4024f43e415b62cf2da.svg",
+    "static/media/logo-udemy-inverted.svg": "/Udemy/static/media/logo-udemy-inverted.e458cf6bf69ac6f909a7b01aee2f0eca.svg",
+    "static/media/volkswagen-light.svg": "/Udemy/static/media/volkswagen-light.db4ef7c351ad0c81417ccc5c46682319.svg",
+    "static/media/logo-udemy.svg": "/Udemy/static/media/logo-udemy.83ca61464031c0efceb5394719203673.svg",
+    "static/media/box-light.svg": "/Udemy/static/media/box-light.d56240f626c1a8286424437f280b4615.svg",
     "index.html": "/Udemy/index.html",
     "main.7a980709.css.map": "/Udemy/static/css/main.7a980709.css.map",
-    "main.73a14444.js.map": "/Udemy/static/js/main.73a14444.js.map"
+    "main.955e82c9.js.map": "/Udemy/static/js/main.955e82c9.js.map"
   },
   "entrypoints": [
     "static/css/main.7a980709.css",
-    "static/js/main.73a14444.js"
+    "static/js/main.955e82c9.js"
   ]
 }
