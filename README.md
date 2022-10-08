@@ -40,8 +40,6 @@ It is task in intern in bld.ai. It is **Building Udemy** website using **React.J
    </ul>
    </li>
 </ul>
-<li>Let's Go visit <a href="https://snazzy-meerkat-1bf0dc.netlify.app/">Rick & Morty Wiki
-</li>
 <hr style="background-color: #4b4c60"></hr>
 <a id = "Started"></a>
 
